@@ -1,9 +1,11 @@
-﻿namespace _2PC.Coordinator.DTO
+﻿using System;
+
+namespace _2PC.Coordinator.DTO
 {
     public class PrepareCreateOrder
     {
 
-        public int Id { get; set; }
+        public Guid Guid { get; set; }
 
         public int Qty { get; set; }
 
