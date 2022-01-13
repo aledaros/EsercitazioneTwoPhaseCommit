@@ -31,7 +31,7 @@ namespace _2PC.Customer.Consumers
 where Id=@id";
             var customerFund = connection.QueryAsync<Customers>(query, new
             {
-                id = context.Message.Id
+                id = context.Message.Guid
             });
 
 

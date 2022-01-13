@@ -4,7 +4,7 @@ namespace _2PC.Coordinator.DTO
 {
     public class CommitCreateOrder
     {
-        public Guid Guid { get; set; }
+        public Guid TransactionId { get; set; }
 
         public int Qty { get; set; }
 
