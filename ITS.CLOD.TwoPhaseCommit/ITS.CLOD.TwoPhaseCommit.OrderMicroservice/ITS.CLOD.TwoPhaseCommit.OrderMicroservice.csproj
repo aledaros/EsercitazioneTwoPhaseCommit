@@ -14,4 +14,8 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="4.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ITS.CLOD.TwoPhaseCommit.Event\ITS.CLOD.TwoPhaseCommit.Event.csproj" />
+  </ItemGroup>
+
 </Project>
