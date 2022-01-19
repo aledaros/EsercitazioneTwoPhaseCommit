@@ -14,7 +14,7 @@ namespace ITS.CLOD.TwoPhaseCommit.Event.Event
 
         public int CustomerId { get; set; }
 
-        const TransactionType transactionType = TransactionType.Customer;
+        const TransactionType _TransactionType = TransactionType.Customer;
 
         public PrepareUpdateCustomerEvent(Guid transactionId, double fund, int customerId)
         {
