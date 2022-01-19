@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CLOD.TwoPhaseCommit.Cus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CLOD.TwoPhaseCommit.OrderMicroservice", "ITS.CLOD.TwoPhaseCommit.OrderMicroservice\ITS.CLOD.TwoPhaseCommit.OrderMicroservice.csproj", "{630637D7-4CE8-4A0A-8ED4-A4DABEFDF357}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.CLOD.TwoPhaseCommit.Event", "ITS.CLOD.TwoPhaseCommit.Event\ITS.CLOD.TwoPhaseCommit.Event.csproj", "{E1E7D0D1-82DB-49D9-9F69-7EE23C8A5159}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{630637D7-4CE8-4A0A-8ED4-A4DABEFDF357}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{630637D7-4CE8-4A0A-8ED4-A4DABEFDF357}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{630637D7-4CE8-4A0A-8ED4-A4DABEFDF357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E7D0D1-82DB-49D9-9F69-7EE23C8A5159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E7D0D1-82DB-49D9-9F69-7EE23C8A5159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E7D0D1-82DB-49D9-9F69-7EE23C8A5159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E7D0D1-82DB-49D9-9F69-7EE23C8A5159}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
