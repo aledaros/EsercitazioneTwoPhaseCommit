@@ -1,3 +1,4 @@
+using ITS.CLOD.TwoPhaseCommit.Event.Event;
 using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,11 @@ builder.Services.AddMassTransit(x =>
                 credentials.Username("guest");
                 credentials.Password("guest");
             });
+
+        rabbitConfigurator.ReceiveEndpoint("answerFromCustomer", e =>
+        {
+            e.Consumer<MessagePrepareEventConsumer>(context);
+        });
     });
 });
 builder.Services.AddMassTransitHostedService();

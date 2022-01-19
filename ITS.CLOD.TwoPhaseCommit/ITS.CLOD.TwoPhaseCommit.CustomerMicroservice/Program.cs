@@ -1,9 +1,11 @@
+using ITS.CLOD.TwoPhaseCommit.CustomerMicroservice.Consumer;
 using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMassTransit(x =>
 {
+    x.AddConsumer<PrepareUpdateCustomerConsumer>(); 
     x.UsingRabbitMq((context, rabbitConfigurator) =>
     {
         rabbitConfigurator.Host(
@@ -16,7 +18,7 @@ builder.Services.AddMassTransit(x =>
             });
         rabbitConfigurator.ReceiveEndpoint("prepareUpdateCustomerFund", e =>
         {
-            e.Consumer<>();
+            e.Consumer<PrepareUpdateCustomerConsumer>(context);
         });
     });
 });

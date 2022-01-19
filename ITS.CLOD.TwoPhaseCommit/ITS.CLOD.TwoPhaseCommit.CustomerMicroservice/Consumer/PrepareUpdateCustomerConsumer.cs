@@ -10,11 +10,12 @@ namespace ITS.CLOD.TwoPhaseCommit.CustomerMicroservice.Consumer
     {
         public readonly CustomerService _customerService;
         public readonly IPublishEndpoint _endpoint;
-        public PrepareUpdateCustomerConsumer(CustomerService customerService,IPublishEndpoint endpoint)
+        public PrepareUpdateCustomerConsumer(CustomerService customerService, IPublishEndpoint endpoint)
         {
             _customerService=customerService;
             _endpoint=endpoint;
         }
+
 
         public async Task Consume(ConsumeContext<PrepareUpdateCustomerEvent> context)
         {
@@ -23,15 +24,15 @@ namespace ITS.CLOD.TwoPhaseCommit.CustomerMicroservice.Consumer
             {
                 customer= _customerService.GetCustomer(context.Message.CustomerId);
             }
-            if(customer == null)
+            if (customer == null)
             {
-                await _endpoint.Publish(new MessagePrepareEvent(context.Message.TransactionId,"Not ready",TransactionType.Customer));
+                await _endpoint.Publish(new MessagePrepareEvent(context.Message.TransactionId, "Not ready", TransactionType.Customer));
             }
             else
             {
                 await _endpoint.Publish(new MessagePrepareEvent(context.Message.TransactionId, "Ready", TransactionType.Customer));
             }
-            
+
         }
     }
 }
