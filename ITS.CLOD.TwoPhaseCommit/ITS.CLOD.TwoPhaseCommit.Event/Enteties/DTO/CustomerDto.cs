@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITS.CLOD.TwoPhaseCommit.Event.Entities.DTO
 {
-    public class InsertOrderDto
+    public class CustomerDto
     {
         public int CustomerId { get; set; }
 

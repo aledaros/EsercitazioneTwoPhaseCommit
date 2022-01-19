@@ -9,7 +9,7 @@ namespace ITS.CLOD.TwoPhaseCommit.Event.Enteties
     public class Customer
     {
 
-        public int CustomerId { get; set; }
+        public int Id { get; set; }
 
         public double Fund { get; set; }
     }
