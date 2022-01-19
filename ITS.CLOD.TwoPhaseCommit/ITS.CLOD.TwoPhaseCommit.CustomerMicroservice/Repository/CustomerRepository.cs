@@ -1,4 +1,6 @@
-﻿using ITS.CLOD.TwoPhaseCommit.Event.Enteties;
+﻿using Dapper.Contrib.Extensions;
+using ITS.CLOD.TwoPhaseCommit.Event.Enteties;
+using Microsoft.Data.SqlClient;
 
 namespace ITS.CLOD.TwoPhaseCommit.CustomerMicroservice.Repository
 {
@@ -15,14 +17,24 @@ namespace ITS.CLOD.TwoPhaseCommit.CustomerMicroservice.Repository
         }
 
 
-        public Customer GetCustomer(int id)
+        public Customer GetCustomer(int customerId)
         {
-
-
+            Customer customer= null;
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                customer=connection.Get<Customer>(customerId);
+            }
+            return customer;
             
         }
 
         public void InsertCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCustomer(Customer customer)
         {
             throw new NotImplementedException();
         }
