@@ -21,11 +21,11 @@ namespace ITS.CLOD.TwoPhaseCommit.Cordinator.Controllers
 
         [HttpPost]
         [Route("/coordinator/insertOrder")]
-        public async Task<IActionResult> InsertOrder(InsertOrderDto insertOrder)
+        public async Task<IActionResult> InsertOrder(CustomerDto insertOrder)
         {
             TransactionId=Guid.NewGuid();
             await _endpoint.Publish(new PrepareUpdateCustomerEvent(TransactionId, insertOrder.Fund, insertOrder.CustomerId));
-
+            
             return Ok();
         }
     }
