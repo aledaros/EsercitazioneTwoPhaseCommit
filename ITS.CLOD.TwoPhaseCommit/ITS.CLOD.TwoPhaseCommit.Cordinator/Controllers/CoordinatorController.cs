@@ -24,7 +24,7 @@ namespace ITS.CLOD.TwoPhaseCommit.Cordinator.Controllers
         public async Task<IActionResult> InsertOrder(InsertOrderDto insertOrder)
         {
             TransactionId=Guid.NewGuid();
-            await _endpoint.Publish(new PrepareUpdateCustomer(TransactionId, insertOrder.Fund, insertOrder.CustomerId));
+            await _endpoint.Publish(new PrepareUpdateCustomerEvent(TransactionId, insertOrder.Fund, insertOrder.CustomerId));
 
             return Ok();
         }

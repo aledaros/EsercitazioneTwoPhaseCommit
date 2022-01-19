@@ -1,4 +1,3 @@
-using ITS.CLOD.TwoPhaseCommit.Event.Event;
 using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +16,7 @@ builder.Services.AddMassTransit(x =>
             });
         rabbitConfigurator.ReceiveEndpoint("prepareUpdateCustomerFund", e =>
         {
-            e.Consumer<PrepareUpdateCustomer>();
+            e.Consumer<>();
         });
     });
 });

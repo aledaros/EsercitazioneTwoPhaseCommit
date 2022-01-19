@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITS.CLOD.TwoPhaseCommit.Event.Enteties
 {
-    internal class Customer
+    public class Customer
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITS.CLOD.TwoPhaseCommit.Event.Event
 {
-    public class PrepareUpdateCustomer
+    public class PrepareUpdateCustomerEvent
     {
         public Guid TransactionId { get; set; }
 
@@ -16,7 +16,7 @@ namespace ITS.CLOD.TwoPhaseCommit.Event.Event
 
         const TransactionType transactionType = TransactionType.Customer;
 
-        public PrepareUpdateCustomer(Guid transactionId, double fund, int customerId)
+        public PrepareUpdateCustomerEvent(Guid transactionId, double fund, int customerId)
         {
             TransactionId=transactionId;
             Fund=fund;

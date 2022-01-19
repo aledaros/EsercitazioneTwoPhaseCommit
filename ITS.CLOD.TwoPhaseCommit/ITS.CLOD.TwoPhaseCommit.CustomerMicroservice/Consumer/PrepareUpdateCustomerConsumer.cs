@@ -5,9 +5,15 @@ namespace ITS.CLOD.TwoPhaseCommit.CustomerMicroservice.Consumer
 {
     public class PrepareUpdateCustomerConsumer : IConsumer<PrepareUpdateCustomerEvent>
     {
+        public int MyProperty { get; set; }
+        public PrepareUpdateCustomerConsumer()
+        {
+            
+        }
+
         public Task Consume(ConsumeContext<PrepareUpdateCustomerEvent> context)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

@@ -18,6 +18,8 @@ namespace ITS.CLOD.TwoPhaseCommit.CustomerMicroservice.Repository
         public Customer GetCustomer(int id)
         {
 
+
+            
         }
 
         public void InsertCustomer(Customer customer)

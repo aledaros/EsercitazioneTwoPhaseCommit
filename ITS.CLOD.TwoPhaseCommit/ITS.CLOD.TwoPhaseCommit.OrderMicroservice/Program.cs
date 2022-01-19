@@ -16,7 +16,7 @@ builder.Services.AddMassTransit(x =>
             });
         rabbitConfigurator.ReceiveEndpoint("prepareUpdateCustomerFund", e =>
         {
-             e.Consumer<>();
+             
         });
     });
 });
