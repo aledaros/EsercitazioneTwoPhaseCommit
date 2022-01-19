@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITS.CLOD.TwoPhaseCommit.Event
 {
-    enum TransactionType
+    public enum TransactionType
     {
         Customer,
         Order
